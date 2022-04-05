@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+/*  Header  */
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: hotpink;
+  padding: 0 2rem;
+  color: white;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
