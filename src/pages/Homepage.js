@@ -9,6 +9,10 @@ function HomePage({ character }) {
           key={rickAndMorty.id}
           img={rickAndMorty.image}
           name={rickAndMorty.name}
+          gender={rickAndMorty.gender}
+          status={rickAndMorty.status}
+          id={rickAndMorty.id}
+          mode={false}
         />
       ))}
         </ul>

@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/Homepage';
 import RandomPage from './pages/RandomPage';
 import FavoritesPage from './pages/FavoritesPage';
+import InfosPage from './pages/InfosPage';
 
 function App() {
   const [character, setCharacter] = useState([]);
@@ -26,6 +27,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage character={character} />} />
+        <Route path="/infos/:id" element={<InfosPage character={character} /> } />
         <Route path="/random" element={<RandomPage character={character} />} />
         <Route path="/favorites" element={<FavoritesPage character={character} />} />
       </Routes>
