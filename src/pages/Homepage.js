@@ -12,7 +12,7 @@ function HomePage({ character }) {
           gender={rickAndMorty.gender}
           status={rickAndMorty.status}
           id={rickAndMorty.id}
-          mode={false}
+          card={false}
         />
       ))}
         </ul>
