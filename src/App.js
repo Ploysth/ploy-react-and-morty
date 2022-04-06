@@ -9,13 +9,13 @@ import FavoritesPage from './pages/FavoritesPage';
 import InfosPage from './pages/InfosPage';
 
 function App() {
-  const [character, setCharacter] = useState([]);
+  const [characters, setCharacters] = useState([]);
   const url = 'https://rickandmortyapi.com/api/character/';
 
   const allCharacters = () => {
     fetch(url)
       .then(response => response.json())
-      .then(data => setCharacter(data.results));
+      .then(data => setCharacters(data.results));
   };
 
   useEffect(() => {
@@ -26,10 +26,10 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage character={character} />} />
-        <Route path="/infos/:id" element={<InfosPage character={character} /> } />
-        <Route path="/random" element={<RandomPage character={character} />} />
-        <Route path="/favorites" element={<FavoritesPage character={character} />} />
+        <Route path="/" element={<HomePage characters={characters} />} />
+        <Route path="/infos/:id" element={<InfosPage characters={characters} /> } />
+        <Route path="/random" element={<RandomPage characters={characters} />} />
+        <Route path="/favorites" element={<FavoritesPage characters={characters} />} />
       </Routes>
       <Navbar />
     </div>

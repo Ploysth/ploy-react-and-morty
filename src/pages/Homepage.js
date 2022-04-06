@@ -1,10 +1,10 @@
 import Card from './../Card';
 
-function HomePage({ character }) {
+function HomePage({ characters }) {
     return(
         <>
         <ul>
-        {character.map(rickAndMorty => (
+        {characters.map(rickAndMorty => (
         <Card
           key={rickAndMorty.id}
           img={rickAndMorty.image}

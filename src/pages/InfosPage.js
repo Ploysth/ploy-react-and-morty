@@ -2,9 +2,9 @@ import Card from "../Card";
 import { useParams } from "react-router-dom";
 
 
-function InfosPage({ character }) {
+function InfosPage({ characters }) {
     const { id } = useParams()
-    const existingCharacter = (character.find(rickAndMorty => rickAndMorty.id == id))
+    const existingCharacter = (characters.find(rickAndMorty => rickAndMorty.id == id))
     return(
         <>
         <ul>
