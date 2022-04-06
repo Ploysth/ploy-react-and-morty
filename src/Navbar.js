@@ -7,7 +7,7 @@ const Navbar = () => {
             <ul className="nav_container">
                 <Link to="/">home</Link>
                 <Link to="/random">random character</Link>
-                <Link to="/favourites">favourites</Link>
+                <Link to="/favorites">favourites</Link>
             </ul>
         
     )

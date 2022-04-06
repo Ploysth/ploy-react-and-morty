@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import { useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/Homepage';
+import RandomPage from './pages/RandomPage';
+import FavoritesPage from './pages/FavoritesPage';
 
 function App() {
   const [character, setCharacter] = useState([]);
@@ -24,6 +26,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage character={character} />} />
+        <Route path="/random" element={<RandomPage character={character} />} />
+        <Route path="/favorites" element={<FavoritesPage character={character} />} />
       </Routes>
       <Navbar />
     </div>
