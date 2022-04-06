@@ -1,8 +1,9 @@
 import './App.css';
 import Header from './Header';
 import Navbar from './Navbar';
-import Card from './Card';
 import { useEffect, useState } from 'react';
+import { Routes, Route } from "react-router-dom";
+import HomePage from './pages/Homepage';
 
 function App() {
   const [character, setCharacter] = useState([]);
@@ -21,13 +22,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {character.map(rickAndMorty => (
-        <Card
-          key={rickAndMorty.id}
-          img={rickAndMorty.image}
-          name={rickAndMorty.name}
-        />
-      ))}
+      <Routes>
+        <Route path="/" element={<HomePage character={character} />} />
+      </Routes>
       <Navbar />
     </div>
   );

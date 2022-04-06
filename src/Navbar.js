@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
         
             <ul className="nav_container">
-                <a href="#">home</a>
-                <a href="#">random character</a>
-                <a href="#">favourites</a>
+                <Link to="/">home</Link>
+                <Link to="/random">random character</Link>
+                <Link to="/favourites">favourites</Link>
             </ul>
         
     )
